@@ -1,0 +1,23 @@
+<div class="mt-4 container">
+  <div class="navbar navbar-expand-xl navbar-dark bg-dark">
+      <ul class="navbar-nav ms-4">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/hello']" routerLinkActive="active">Hello</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/attr']" routerLinkActive="active">Attritube Directive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/str']" routerLinkActive="active">Structure Directive</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/ng-if']" routerLinkActive="active">NgIf Directive</a>
+        </li>
+      </ul>
+  </div>
+
+  <div class="mt-4">
+
+    <router-outlet></router-outlet>
+  </div>
+</div>

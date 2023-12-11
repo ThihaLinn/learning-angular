@@ -1,0 +1,78 @@
+<div class="container mt-4">
+  <h3 >Pipe Transformation</h3>
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th>Data Type</th>
+        <th>Without pipe</th>
+        <th>With pipe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <h5>Custom Pipe</h5>
+        </td>
+      </tr>
+     <tr>
+      <td>Custom Object</td>
+      <td>{{User}}</td>
+      <td>{{User |userName |uppercase}}</td>
+     </tr>
+      <tr>
+        <td>Custom Object with parameters</td>
+        <td>{{User}}</td>
+        <td>{{User |userName:true}}</td>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          <h5>Predefine Pipe</h5>
+        </td>
+      </tr>
+
+      <tr>
+        <td>uppercase</td>
+        <td>{{message}}</td>
+        <td>{{message | uppercase}}</td>
+      </tr>
+      
+      <tr>
+        <td>lowercase</td>
+        <td>{{message}}</td>
+        <td>{{message | lowercase}}</td>
+      </tr>
+
+      <tr>
+        <td>Date</td>
+        <td>{{today}}</td>
+        <td>{{today | date : 'fullDate'}}</td>
+      </tr>
+
+      <tr>
+        <td>Decimal</td>
+        <td>{{data1}}</td>
+        <td>{{data1 | number : '1.2-2' }}</td>
+      </tr>
+
+      <tr>
+        <td>Decimal</td>
+        <td>{{data2}}</td>
+        <td>{{data2 | number : '1.1-2'}}</td>
+      </tr>
+
+      <tr>
+        <td>Percent</td>
+        <td>{{value}}</td>
+        <td >{{value | percent}}</td>
+      </tr>
+
+      <tr>
+        <td>Currency</td>
+        <td>{{data2}}</td>
+        <td>{{data2 | currency : 'JPY' : 'symbol'}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

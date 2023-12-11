@@ -1,0 +1,39 @@
+<app-card title="NgIf Formal">
+  <div class="d-flex  align-items-center">
+    <ng-template [ngIf]="formal">
+      <div>NgIf formal Testing </div>
+    </ng-template>
+    <button class="btn btn-primary w-25 ms-auto" (click)="formal=!formal">{{formal?"Hide":"Show"}}</button>
+  </div>
+</app-card>
+
+<app-card title="NgIf short hand">
+  <div class="d-flex  align-items-center">
+    <div *ngIf="shortHand">NgIf short hand Testing </div>   
+    <button class="btn btn-primary w-25 ms-auto" (click)="shortHand=!shortHand">{{shortHand?"Hide":"Show"}}</button>
+  </div>
+</app-card>
+
+<app-card title="NgIfElse Formal">
+  <div class="d-flex  align-items-center">
+    <ng-template [ngIf]="newFormal" [ngIfElse]="elseContent">
+      <div>In ngIF statement</div>
+    </ng-template>
+    <ng-template #elseContent>
+      <div >In ngIfElse statement</div>
+    </ng-template>
+    <button class="btn btn-primary w-25 ms-auto" (click)="newFormal=!newFormal">{{newFormal?"Hide":"Show"}}</button>
+  </div>
+</app-card>
+
+<app-card title="NgIfElse short hand">
+  <div class="d-flex  align-items-center">
+    <div *ngIf="newShortHand else elseContent"> In ngIfElse short hand Testing </div>
+    <ng-template #elseContent>
+      <div>In ngIfElse short hand Testing</div>
+    </ng-template>
+    <button class="btn btn-primary w-25 ms-auto" (click)="newShortHand=!newShortHand">{{newShortHand?"Hide":"Show"}}</button>
+  </div>
+</app-card>
+
+
